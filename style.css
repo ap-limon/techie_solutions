@@ -2,9 +2,85 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 12px;
     text-decoration: none;
-    color: black;
+    list-style: none;
+}
+
+body {
+    background-image: linear-gradient(95deg, rgba(0, 173, 200, 0.75), rgba(0, 120, 180, 0.8)), url(./resources/OSFi.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Navigation bar css going on */
+#navigation-bar {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    background-color: rgba(5, 160, 210, 1);
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#navigation {
+    width: 60%;
+    font-size: 1.5rem;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav ul li {
+    width: 20%;
+    text-align: center;
+}
+nav ul li a {
+    color: white;
+} 
+/* Hide the checkbox for responsive purpose */
+#toggle-menu {
+    display: none;
+}
+/* Hamburger meny style hidden now will appear in mobile */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    user-select: none;
+}
+
+/* responsive design for the mobile */
+@media (max-width: 767px) {
+    #navigation ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        background-color: rgba(5, 160, 210, 1);
+        border-top: 1px solid rgb(3, 11, 17);
+    }
+    #navigation ul li {
+        text-align: center;
+    }
+    .hamburger {
+        display: block;
+        text-align: center;
+    }
+    #toggle-menu:checked + label + nav ul {
+        display: flex;
+        width: 100%;
+    }
+    #toggle-menu:checked + label + nav ul li {
+        border-top: 2px solid rgba(3, 11, 17, .3);
+        width: 100%;
+        padding: 5px;
+    }
 }
 
 

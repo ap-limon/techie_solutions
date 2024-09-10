@@ -7,11 +7,16 @@
     <title>Techie Solutions</title>
 </head>
 <body>
-    <header>
+    <header id="navigation-bar">
         <div id="brand_logo">
             <img src="resources/logo_placeholder.svg" alt="" srcset="">
         </div>
         <div id="navigation">
+            <!-- Hidden checkbox to control the menu -->
+            <input type="checkbox" name="toggler" id="toggle-menu">
+            <!-- Label acting as a hamburger menu -->
+            <label for="toggle-menu" class="hamburger">&#9776</label>
+
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
