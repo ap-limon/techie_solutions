@@ -40,8 +40,53 @@ nav ul li {
     text-align: center;
 }
 nav ul li a {
+    position: relative;
+    display: inline-block;
     color: white;
+    padding: 5px;
+    /* animation purpose */
+    transition: color 0.3s ease, background-color 0.3s eas;
+    border-radius: 10%;
 } 
+/* these are all for the animation purpose */
+nav ul li a:hover {
+    color: #007BFF;
+    background-color: aliceblue;
+}
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(17, 16, 16);
+    transition: width 0.4s ease;
+}
+nav ul li a:hover::before {
+    width: 100%;
+}
+nav ul li a:active::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 123, 255, .5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: ripple 0.5s linear;
+}
+@keyframes ripple {
+    to {
+        width: 200%;
+        opacity: 0;
+        height: 200%;
+    }
+}
+
+
 /* Hide the checkbox for responsive purpose */
 #toggle-menu {
     display: none;
