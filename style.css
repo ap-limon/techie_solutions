@@ -230,10 +230,14 @@ nav ul li a:active::after {
     }
     .intro-content {
         flex-direction: column;
-        padding: 15px;
+        padding: 10px;
+    }
+    .intro-text p {
+        line-height: 1.8;
     }
     .intro-image{
         padding: 0;
+        max-width: 90%;
     }
     .intro-image img {
         max-width: 100%;
@@ -265,6 +269,7 @@ nav ul li a:active::after {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+    cursor: context-menu;
 }
 .service-card:hover {
     transform: translateY(-5px);
@@ -280,6 +285,9 @@ nav ul li a:active::after {
     font-size: 24px;
     color: #333;
     margin-top: 20px;
+}
+.service-card h3:hover {
+    color: #007BFF;
 }
 .service-card p {
     font-size: 16px;
@@ -327,6 +335,9 @@ nav ul li a:active::after {
 }
 #footer.social-media ul li {
     display: inline-block;
+}
+#footer .social-media ul li:hover {
+    transform: scale(1.2);
 }
 #footer .social-media ul li a {
     color: #fff;
