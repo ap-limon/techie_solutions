@@ -231,3 +231,63 @@ nav ul li a:active::after {
         max-width: 100%;
     }
 }
+
+
+/* services section starts here */
+#services {
+    padding: 15px 0;
+    background-color: rgba(0, 173, 200, 0.4);
+    text-align: center;
+}
+#services h2 {
+    font-size: 36px;
+    color: whitesmoke;
+    margin-bottom: 40px;
+}
+.service-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.service-card {
+    flex: 1 1 30%;
+    background-color: rgba(255, 255, 255, .4);
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+}
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+.service-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+}
+.service-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* responsive styles for serivces */
+@media (max-width: 767px) {
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-card {
+        flex: 1 1 100%;
+        margin: 15px 0
+    }
+}
