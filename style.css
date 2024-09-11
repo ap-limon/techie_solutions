@@ -6,13 +6,15 @@
     list-style: none;
 }
 
+
 body {
-    background-image: linear-gradient(95deg, rgba(0, 173, 200, 0.75), rgba(0, 120, 180, 0.8)), url(./resources/OSFi.gif);
+    background-image: linear-gradient(95deg, rgba(0, 173, 200, 0.75), rgba(0, 120, 180, 0.8)), url(./resources/site_background.gif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
+
 
 /* Navigation bar css going on */
 #navigation-bar {
@@ -85,8 +87,6 @@ nav ul li a:active::after {
         height: 200%;
     }
 }
-
-
 /* Hide the checkbox for responsive purpose */
 #toggle-menu {
     display: none;
@@ -98,7 +98,6 @@ nav ul li a:active::after {
     font-size: 30px;
     user-select: none;
 }
-
 /* responsive design for the mobile */
 @media (max-width: 767px) {
     #navigation ul {
@@ -129,3 +128,106 @@ nav ul li a:active::after {
 }
 
 
+/* Main section starts here */
+/* general container with consistent padding */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+#introduction {
+    padding: 65px 0;
+    background-color: rgba(0, 173, 200, 0.4);
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.intro-content {
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    opacity: 0;
+    animation: fadeInSlideUp 1s ease-in-out forwards;
+}
+.intro-text {
+    flex: 1;
+    animation: fadeInSlideRight 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+.intro-text h2 {
+    font-size: 36px;
+    color: whitesmoke;
+    margin-bottom: 20px;
+}
+.intro-text p {
+    font-size: 18px;
+    color: #eee;
+    max-width: 600px;
+    text-align: justify;
+}
+.intro-image {
+    flex: 1;
+    text-align: center;
+    padding-top: 30px;
+    animation: fadeInSlideLeft 1s ease-in-out forwards;
+}
+.intro-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .1);
+}
+
+/* keyframes fro fade in and slide in animation */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInSlideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInSlideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        background-image: linear-gradient(95deg, rgba(0, 173, 200, 0.75), rgba(0, 120, 180, 0.8)); /* Only the gradient */
+    }
+    #introduction {
+        margin-top: 0;
+    }
+    .intro-content {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .intro-image{
+        padding: 0;
+    }
+    .intro-image img {
+        max-width: 100%;
+    }
+}
